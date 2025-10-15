@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cinema Admin</title>
+  <link rel="icon" href="/frontend/assets/img/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: { 500: '#6366f1' } } } } };
+  </script>
+  <link rel="stylesheet" href="/frontend/assets/css/app.css" />
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-slate-900/70 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+      <a href="#/" class="font-semibold">Cinema Admin</a>
+      <nav class="ml-auto flex items-center gap-1 text-sm">
+        <a class="px-3 py-2 rounded-md hover:bg-white/5" href="#/movies">Movies</a>
+        <a class="px-3 py-2 rounded-md hover:bg-white/5" href="#/screenings">Screenings</a>
+        <a class="px-3 py-2 rounded-md hover:bg-white/5" href="#/seats">Seats</a>
+        <a class="px-3 py-2 rounded-md hover:bg-white/5" href="#/tickets">Tickets</a>
+        <a class="px-3 py-2 rounded-md hover:bg-white/5" href="#/orders">Orders</a>
+        <a class="px-3 py-2 rounded-md hover:bg-white/5" href="#/transactions">Transactions</a>
+        <a class="px-3 py-2 rounded-md hover:bg-white/5" href="#/users">Users</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="admin-app" class="max-w-7xl mx-auto px-4 py-8"></main>
+
+  <script type="module" src="/frontend/admin/assets/js/admin-app.js"></script>
+</body>
+</html>
