@@ -1,65 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cinema – Movie Tickets</title>
-  <meta name="description" content="Buy movie tickets fast. Browse movies, pick seats, and pay." />
-  <link rel="icon" href="/frontend/assets/img/favicon.png" />
-  <!-- Tailwind CDN (preflight + utilities) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc', 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 800: '#3730a3', 900: '#312e81'
-            },
-          },
-          boxShadow: {
-            soft: '0 10px 30px -12px rgba(0,0,0,0.35)'
-          }
-        }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="/frontend/assets/css/app.css" />
-</head>
-<body class="min-h-screen bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(99,102,241,0.15),transparent),linear-gradient(180deg,#0b1020_0%,#0b1224_100%)] text-slate-100 selection:bg-brand-400/30">
-  <!-- App Shell -->
-  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-slate-900/70 border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
-      <a href="#/" class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-brand-400">
-          <path d="M4 6h16v12H4z" opacity=".15"></path>
-          <path d="M20 5H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1m-1 2v10H5V7z"/>
-        </svg>
-        <span class="font-semibold">Cinema</span>
-      </a>
-      <nav class="ml-auto flex items-center gap-1">
-        <a href="#/movies" class="px-3 py-2 rounded-md hover:bg-white/5">Movies</a>
-        <a href="#/dashboard" class="px-3 py-2 rounded-md hover:bg-white/5">My Tickets</a>
-        <a href="#/signin" id="nav-auth" class="btn px-3 py-2 rounded-md bg-brand-500/20 text-brand-200 hover:bg-brand-500/30">Sign in</a>
-        <button id="nav-signout" class="btn hidden px-3 py-2 rounded-md hover:bg-white/5">Sign out</button>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CinemaTickets - Book Your Movie Experience</title>
+    <meta name="description" content="Book movie tickets online with ease. Choose your seats, select showtimes, and enjoy the latest films at your favorite cinema." />
+    <meta name="author" content="CinemaTickets" />
 
-  <main id="app" class="max-w-6xl mx-auto px-4 py-8">
-    <!-- Routed content will be injected here -->
-  </main>
+    <meta property="og:title" content="CinemaTickets - Book Your Movie Experience" />
+    <meta property="og:description" content="Book movie tickets online with ease. Choose your seats, select showtimes, and enjoy the latest films at your favorite cinema." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-  <footer class="border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-400 flex flex-wrap items-center gap-3">
-      <span>© <span id="year"></span> Cinema</span>
-      <span class="hidden md:inline">•</span>
-      <a href="#/about" class="hover:text-slate-200">About</a>
-      <span class="ml-auto">Demo app · Vanilla JS + Tailwind</span>
-    </div>
-  </footer>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-  <!-- App scripts -->
-  <script type="module" src="/frontend/assets/js/app.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
